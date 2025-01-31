@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Card - LOTR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .movie-card {
+            background: #2c2c2c;
+            color: #fff;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-card h2 {
+            margin: 15px 0;
+        }
+        .movie-card p {
+            padding: 0 15px;
+            font-size: 14px;
+        }
+        .movie-card button {
+            background: #f4a700;
+            color: #000;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .movie-card button:hover {
+            background: #d48b00;
+        }
+        .extra-info {
+            display: none;
+            padding: 0 15px 15px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-card">
+        <img src="c:\Users\Primrose\OneDrive\Pictures\Camera Roll\the-lord-of-the-rings-9781608873821_hr.jpg" alt="Lord of the Rings Poster">
+        <h2>The Lord of the Rings</h2>
+        <p>An epic fantasy trilogy directed by Peter Jackson, based on J.R.R. Tolkien's novels.</p>
+        <button onclick="toggleInfo()">More Info</button>
+        <div class="extra-info" id="extraInfo">
+            <p>Release Year: 2001-2003</p>
+            <p>Director: Peter Jackson</p>
+            <p>Starring: Elijah Wood, Ian McKellen, Viggo Mortensen</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById("extraInfo");
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
